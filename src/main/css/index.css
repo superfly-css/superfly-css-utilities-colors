@@ -1,0 +1,38 @@
+/*
+ * Copyright 2015-2016 Firefly Semantics Corporation
+ * Copyright 2015-2016 Ole Ersoy
+ * Copyright 2015-2016 superfly-css
+ */
+
+/*! superfly-css-colors    | MIT License | https://github.com/superfly-css/superfly-css-utilities-colors/blob/master/LICENSE.md */
+
+/* =======================================
+   COLORS
+   0: Import shared color variables
+   1: Gray background color utilities
+   2: Notification background color utilities
+   --------------------------------------
+   -- Naming Conventions --
+   --------------------------------------
+   All background color classes start with
+   `u-color-background-`.
+   --------------------------------------
+   ======================================= */
+/* 0 */
+@import superfly-css-variables-colors;
+
+/* 1 */
+@each $weight in 100, 300, 400, 500, 600, 700, 900 {
+    .u-color-background-gray-$(weight) {
+      background-color: var(--color-gray-$(weight));
+    }
+}
+
+/* 2 */
+@each $weight in 100, 300, 500, 700, 900 {
+  @each $brand in primary, success, info, warning, danger {
+    .u-color-background-$(brand)-$(weight) {
+      background-color: var(--color-$(brand)-$(weight));
+    }
+  }
+}

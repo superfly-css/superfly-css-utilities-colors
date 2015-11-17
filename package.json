@@ -1,0 +1,33 @@
+{
+  "name": "superfly-css-utilities-colors",
+  "version": "0.0.0",
+  "description": "Color utilities",
+  "main": "src/main/css/index.css",
+  "style": "src/main/index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superfly-css/superfly-css-utilities-colors.git"
+  },
+  "keywords": [
+    "utilities",
+    "colors",
+    "css-variables",
+    "background",
+    "superfly-css"
+  ],
+  "author": "Ole Ersoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/superfly-css/superfly-css-utilities-colors/issues"
+  },
+  "homepage": "https://github.com/superfly-css/superfly-css-utilities-colors#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "superfly-css-task-build": "0.0.2",
+    "superfly-css-task-test": "0.0.1",
+    "verdijs-task-clean": "0.0.3"
+  }  
+}
