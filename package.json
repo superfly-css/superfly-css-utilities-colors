@@ -26,11 +26,12 @@
   "homepage": "https://github.com/superfly-css/superfly-css-utilities-colors#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "superfly-css-task-build": "0.0.2",
-    "superfly-css-task-test": "0.0.1",
+    "superfly-css-foundation": "0.0.0",
+    "superfly-css-task-build": "0.0.8",
+    "superfly-css-task-test": "0.0.2",
     "verdijs-task-clean": "0.0.3"
   },
   "dependencies": {
-    "superfly-css-variables-colors": "0.0.0"
+    "superfly-css-variables-colors": "0.0.11"
   }
 }
