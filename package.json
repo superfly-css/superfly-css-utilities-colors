@@ -25,15 +25,15 @@
   "homepage": "https://github.com/superfly-css/superfly-css-utilities-colors#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "superfly-css-component-display": "0.0.1",
-    "superfly-css-foundation": "0.0.3",
-    "superfly-css-pli": "0.0.5",
-    "superfly-css-task-build": "0.1.0",
-    "superfly-css-task-test": "0.0.2",
-    "superfly-css-typography": "0.0.1",
+    "superfly-css-component-display": "^0.0.1",
+    "superfly-css-foundation": "^0.0.3",
+    "superfly-css-pli": "^0.0.5",
+    "superfly-css-task-build": "^0.1.0",
+    "superfly-css-task-test": "^0.0.2",
+    "superfly-css-typography": "^0.0.1",
     "verdijs-task-clean": "0.0.3"
   },
   "dependencies": {
-    "superfly-css-variables-colors": "0.0.12"
+    "superfly-css-variables-colors": "^0.0.12"
   }
 }
