@@ -19,7 +19,7 @@
    --------------------------------------
    ======================================= */
 /* 0 */
-@import superfly-css-variables-colors;
+@import "superfly-css-variables-colors";
 
 /* 1 */
 @each $weight in 100, 300, 400, 500, 600, 700, 900 {

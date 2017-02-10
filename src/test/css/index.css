@@ -1,6 +1,6 @@
-@import superfly-css-foundation;
-@import superfly-css-typography;
-@import superfly-css-component-display;
+@import "superfly-css-foundation";
+@import "superfly-css-typography";
+@import "superfly-css-component-display";
 
 hr {
   margin-left: 0;
