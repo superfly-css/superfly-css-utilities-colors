@@ -1,6 +1,8 @@
 require('verdijs-task-clean');
 require('superfly-css-task-build');
 require('superfly-css-task-test');
+require('superfly-css-task-lint');
+
 
 var PLI = require('superfly-css-pli');
 
