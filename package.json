@@ -1,6 +1,6 @@
 {
   "name": "superfly-css-utilities-colors",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Color utilities",
   "main": "src/main/css/index.css",
   "scripts": {
@@ -28,7 +28,7 @@
     "superfly-css-component-display": "^0.0.1",
     "superfly-css-foundation": "^0.0.7",
     "superfly-css-pli": "^0.0.8",
-    "superfly-css-task-build": "^0.1.5",
+    "superfly-css-task-build": "^0.1.6",
     "superfly-css-task-test": "^0.1.1",
     "superfly-css-typography": "^0.0.3",
     "superfly-css-task-lint": "0.0.3",
