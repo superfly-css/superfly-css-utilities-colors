@@ -1,7 +1,7 @@
 /*
- * Copyright 2015-2016 Firefly Semantics Corporation
- * Copyright 2015-2016 Ole Ersoy
- * Copyright 2015-2016 superfly-css
+ * Copyright 2015 Firefly Semantics Corporation
+ * Copyright 2015 Ole Ersoy
+ * Copyright 2015 superfly-css
  */
 
 /*! superfly-css-utilities-colors | MIT License | https://github.com/superfly-css/superfly-css-utilities-colors/blob/master/LICENSE.md */
@@ -11,6 +11,9 @@
    0: Import shared color variables
    1: Gray background color utilities
    2: Notification background color utilities
+   3: Google Chrome Color Palette
+   4: Superfly-Css Color Palette
+   5: Browser Named colors
    --------------------------------------
    -- Naming Conventions --
    --------------------------------------
@@ -35,4 +38,50 @@
       background-color: var(--color-$(brand)-$(weight)) !important;
     }
   }
+}
+
+/* 3 */
+.u-text-color-fuchsia {
+    color: #e91e63 !important;
+}
+
+.u-background-color-fuchsia {
+    background-color: #e91e63 !important;
+}
+
+.u-text-color-orange-red {
+    color: #ff5722 !important;
+}
+
+.u-background-color-orange-red {
+    background-color: #ff5722 !important;
+}
+
+
+
+/* 4 */
+.u-text-color-neon-mustard {
+   color: #e1eb10 !important;
+}
+
+.u-background-color-neon-mustard {
+    background-color: #e1eb10 !important;
+}
+
+/* 5 */
+
+.u-text-color-tomato {
+    color: tomato !important;
+}
+
+.u-background-color-tomato {
+    background-color: tomato !important;
+}
+
+.u-text-color-medium-aquamarine {
+    color: MediumAquamarine !important;
+}
+
+.u-background-color-medium-aquamarine {
+   background-color: MediumAquamarine !important;
 }
