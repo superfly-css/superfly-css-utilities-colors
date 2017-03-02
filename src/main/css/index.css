@@ -12,7 +12,10 @@
    -- Naming Conventions --
    --------------------------------------
    All background color classes start with
-   `u-color-background-`.
+   `u-background-color-`.
+   --------------------------------------
+   All text color classes start with
+   `u-text-color-`.
    --------------------------------------
    ======================================= */
 /* 0 */
@@ -20,7 +23,7 @@
 
 /* 1 */
 @each $weight in 100, 300, 400, 500, 600, 700, 900 {
-    .u-color-background-gray-$(weight) {
+    .u-background-color-gray-$(weight) {
       background-color: var(--color-gray-$(weight)) !important;
     }
 }
@@ -28,7 +31,7 @@
 /* 2 */
 @each $weight in 100, 300, 500, 700, 900 {
   @each $brand in primary, success, info, warning, danger {
-    .u-color-background-$(brand)-$(weight) {
+    .u-background-color-$(brand)-$(weight) {
       background-color: var(--color-$(brand)-$(weight)) !important;
     }
   }
@@ -51,6 +54,13 @@
     background-color: #ff5722 !important;
 }
 
+.u-text-color-silver-grey {
+    color: #9e9e9e !important;
+}
+
+.u-background-color-silver-grey {
+    background-color: #9e9e9e !important;
+}
 
 
 /* 4 */
