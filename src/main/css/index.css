@@ -38,6 +38,22 @@
 }
 
 /* 3 */
+.u-text-color-black {
+    color: #000 !important;
+}
+
+.u-background-color-black {
+    background-color: #000 !important;
+}
+
+.u-text-color-white {
+    color: #fff !important;
+}
+
+.u-background-color-white {
+    background-color: #fff !important;
+}
+
 .u-text-color-fuchsia {
     color: #e91e63 !important;
 }
