@@ -1,5 +1,6 @@
 /*! superfly-css-utilities-colors | MIT License | https://github.com/superfly-css/superfly-css-utilities-colors/blob/master/LICENSE.md */
 
+
 /* =======================================
    COLORS
    0: Import shared color variables
@@ -8,6 +9,7 @@
    3: Google Chrome Color Palette
    4: Superfly-Css Color Palette
    5: Browser Named colors
+   6: Simple numeric Hex Color Combinations
    --------------------------------------
    -- Naming Conventions --
    --------------------------------------
@@ -18,26 +20,34 @@
    `u-text-color-`.
    --------------------------------------
    ======================================= */
+
+
 /* 0 */
+
 @import "superfly-css-variables-colors";
 
 /* 1 */
+
 @each $weight in 100, 300, 400, 500, 600, 700, 900 {
     .u-background-color-gray-$(weight) {
-      background-color: var(--color-gray-$(weight)) !important;
+        background-color: var(--color-gray-$(weight)) !important;
     }
 }
+
 
 /* 2 */
+
 @each $weight in 100, 300, 500, 700, 900 {
-  @each $brand in primary, success, info, warning, danger {
-    .u-background-color-$(brand)-$(weight) {
-      background-color: var(--color-$(brand)-$(weight)) !important;
+    @each $brand in primary, success, info, warning, danger {
+        .u-background-color-$(brand)-$(weight) {
+            background-color: var(--color-$(brand)-$(weight)) !important;
+        }
     }
-  }
 }
 
+
 /* 3 */
+
 .u-text-color-black {
     color: #000 !important;
 }
@@ -80,13 +90,15 @@
 
 
 /* 4 */
+
 .u-text-color-neon-mustard {
-   color: #e1eb10 !important;
+    color: #e1eb10 !important;
 }
 
 .u-background-color-neon-mustard {
     background-color: #e1eb10 !important;
 }
+
 
 /* 5 */
 
@@ -103,5 +115,25 @@
 }
 
 .u-background-color-medium-aquamarine {
-   background-color: MediumAquamarine !important;
+    background-color: MediumAquamarine !important;
+}
+
+
+/* 6 */
+@for $c from 1 to 9 {
+    .u-background-color-$c$(c)$(c) {
+        background-color: #$c$(c)$(c) !important;
+    }
+}
+
+@for $c from 1 to 9 {
+    .u-border-color-$c$(c)$(c) {
+        border-color: #$c$(c)$(c) !important;
+    }
+}
+
+@for $c from 1 to 9 {
+    .u-text-color-$c$(c)$(c) {
+        color: #$c$(c)$(c) !important;
+    }
 }

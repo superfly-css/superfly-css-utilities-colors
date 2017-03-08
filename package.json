@@ -26,12 +26,12 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "superfly-css-component-display": "^0.0.1",
-    "superfly-css-foundation": "^0.0.7",
+    "superfly-css-foundation": "^0.0.8",
     "superfly-css-pli": "^0.0.8",
-    "superfly-css-task-build": "^0.1.6",
+    "superfly-css-task-build": "^0.1.9",
+    "superfly-css-task-lint": "0.1.1",
     "superfly-css-task-test": "^0.1.1",
     "superfly-css-typography": "^0.0.3",
-    "superfly-css-task-lint": "0.0.3",
     "verdijs-task-clean": "0.0.3"
   },
   "dependencies": {
