@@ -99,6 +99,14 @@
     background-color: #e1eb10 !important;
 }
 
+.u-text-color-soft-white {
+    text-color: #F8F8F7 !important;
+}
+
+.u-background-color-soft-white {
+    background-color: #F8F8F7 !important;
+}
+
 
 /* 5 */
 
@@ -117,7 +125,6 @@
 .u-background-color-medium-aquamarine {
     background-color: MediumAquamarine !important;
 }
-
 
 /* 6 */
 @for $c from 1 to 9 {
