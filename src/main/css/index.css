@@ -114,6 +114,11 @@
     color: tomato !important;
 }
 
+:root {
+  --u-text-color-tomato {
+      color: tomato !important;
+  }
+}
 .u-background-color-tomato {
     background-color: tomato !important;
 }
