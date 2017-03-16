@@ -90,10 +90,14 @@
     @apply(--u-text-color-silver-grey);
 }
 
-
+:root {
+  --u-background-color-silver-grey {
+      color: #9e9e9e !important;
+  }
+}
 
 .u-background-color-silver-grey {
-    background-color: #9e9e9e !important;
+    @apply(--u-background-color-silver-grey);
 }
 
 
