@@ -38,7 +38,7 @@
 
 @each $weight in 100, 300, 400, 500, 600, 700, 900 {
     .u-background-color-gray-$(weight) {
-        @apply(u-background-color-gray-$(weight));
+        @apply(--u-background-color-gray-$(weight));
     }
 }
 
@@ -53,6 +53,7 @@
       }
   }
 }
+
 @each $weight in 100, 300, 500, 700, 900 {
     @each $brand in primary, success, info, warning, danger {
         .u-background-color-$(brand)-$(weight) {
@@ -207,7 +208,6 @@
 }
 
 /* 5 */
-
 :root {
   --u-text-color-tomato {
       color: tomato !important;
