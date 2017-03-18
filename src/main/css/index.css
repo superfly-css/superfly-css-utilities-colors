@@ -228,6 +228,27 @@
     @apply(--u-background-color-tomato);
 }
 
+
+:root {
+  --u-text-color-tomato-red {
+    color: #E1332D;
+  }
+}
+
+.u-text-color-tomato-red {
+    @apply(--u-text-color-tomato-red);
+}
+
+:root {
+  --u-background-color-tomato-red {
+      background-color: #E1332D !important;
+  }
+}
+
+.u-background-color-tomato {
+    @apply(--u-background-color-tomato-red);
+}
+
 :root {
   --u-text-color-medium-aquamarine {
       color: MediumAquamarine !important;
