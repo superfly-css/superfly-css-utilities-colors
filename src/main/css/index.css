@@ -178,6 +178,17 @@
 }
 
 :root {
+  --u-border-color-neon-mustard {
+      border-color: #e1eb10 !important;
+  }
+}
+
+.u-border-color-neon-mustard {
+    @apply(--u-border-color-neon-mustard);
+}
+
+
+:root {
   --u-background-color-neon-mustard {
       background-color: #e1eb10 !important;
   }
