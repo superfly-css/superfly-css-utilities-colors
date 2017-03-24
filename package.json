@@ -1,10 +1,13 @@
 {
   "name": "superfly-css-utilities-colors",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Color utilities",
   "main": "src/main/css/index.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update": "ncu -a && npm i",
+    "clean": "gulp clean",
+    "build": "npm run clean && gulp build:css",
+    "test": "npm run build && gulp test:css"
   },
   "repository": {
     "type": "git",
@@ -27,14 +30,15 @@
     "gulp": "^3.9.1",
     "superfly-css-component-display": "^0.0.1",
     "superfly-css-foundation": "^0.0.8",
-    "superfly-css-pli": "^0.0.8",
-    "superfly-css-task-build": "^0.1.9",
+    "superfly-css-pli": "^0.0.9",
+    "superfly-css-task-build": "^0.3.0",
+    "superfly-css-task-clean": "0.0.1",
+    "superfly-css-task-deploy": "0.0.1",
+    "superfly-css-task-test": "^0.3.0",
     "superfly-css-task-lint": "0.1.1",
-    "superfly-css-task-test": "^0.1.1",
-    "superfly-css-typography": "^0.0.3",
-    "verdijs-task-clean": "0.0.3"
+    "superfly-css-typography": "^0.0.3"
   },
   "dependencies": {
-    "superfly-css-variables-colors": "^0.0.12"
+    "superfly-css-variables-colors": "^0.0.17"
   }
 }

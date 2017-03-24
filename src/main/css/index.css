@@ -4,12 +4,10 @@
 /* =======================================
    COLORS
    0: Import shared color variables
-   1: Gray background color utilities
+   1: Gray color utilities
    2: Notification background color utilities
-   3: Google Chrome Color Palette
-   4: Superfly-Css Color Palette
-   5: Browser Named colors
-   6: Simple numeric Hex Color Combinations
+   3: Text, background, and border colors
+   4: Simple numeric Hex Color Combinations
    --------------------------------------
    -- Naming Conventions --
    --------------------------------------
@@ -42,6 +40,34 @@
     }
 }
 
+:root {
+  @each $weight in 100, 300, 400, 500, 600, 700, 900 {
+      --u-text-color-gray-$(weight) {
+          color: var(--color-gray-$(weight)) !important;
+      }
+  }
+}
+
+@each $weight in 100, 300, 400, 500, 600, 700, 900 {
+    .u-text-color-gray-$(weight) {
+        @apply(--u-text-color-gray-$(weight));
+    }
+}
+
+:root {
+  @each $weight in 100, 300, 400, 500, 600, 700, 900 {
+      --u-border-color-gray-$(weight) {
+          color: var(--color-gray-$(weight)) !important;
+      }
+  }
+}
+
+@each $weight in 100, 300, 400, 500, 600, 700, 900 {
+    .u-border-color-gray-$(weight) {
+        @apply(--u-border-color-gray-$(weight));
+    }
+}
+
 
 /* 2 */
 :root {
@@ -64,223 +90,41 @@
 
 
 /* 3 */
-:root {
-  --u-text-color-black {
-      color: #000 !important;
-  }
-}
 
-.u-text-color-black {
-    @apply(--u-text-color-black);
-}
+@each $color in black, white, tomato, neon-mustard, purple-pink, tomato-red, light-orange-red, orange-red, silver-grey, soft-white, medium-aquamarine {
+    :root {
+      --u-text-color-$(color) {
+          color: var(--color-$(color)) !important;
+      }
+    }
 
-:root {
-  --u-background-color-black {
-      background-color: #000 !important;
-  }
-}
+    .u-text-color-$(color) {
+        @apply(--u-text-color-$(color));
+    }
 
-.u-background-color-black {
-    @apply(--u-background-color-black);
-}
+    :root {
+      --u-background-color-$(color) {
+          background-color: var(--color-$(color)) !important;
+      }
+    }
 
-:root {
-  --u-text-color-white {
-      color: #fff !important;
-  }
-}
+    .u-background-color-$(color) {
+        @apply(--u-background-color-$(color));
+    }
 
-.u-text-color-white {
-    @apply(--u-text-color-white);
-}
+    :root {
+      --u-border-color-$(color) {
+          border-color: var(--color-$(color)) !important;
+      }
+    }
 
-:root {
-  --u-background-color-white {
-      background-color: #fff !important;
-  }
+    .u-border-color-$(color) {
+        @apply(--u-border-color-$(color));
+    }
 }
-
-.u-background-color-white {
-    @apply(--u-background-color-white);
-}
-
-:root {
-  --u-text-color-fuchsia {
-      color: #e91e63 !important;
-  }
-}
-
-.u-text-color-fuchsia {
-    @apply(--u-text-color-fuchsia);
-}
-
-:root {
-  --u-background-color-fuchsia {
-      background-color: #e91e63 !important;
-  }
-}
-
-.u-background-color-fuchsia {
-    @apply(--u-background-color-fuchsia);
-}
-
-:root {
-  --u-text-color-orange-red {
-      color: #ff5722 !important;
-  }
-}
-
-.u-text-color-orange-red {
-    @apply(--u-text-color-orange-red);
-}
-
-:root {
-  --u-background-color-orange-red {
-      background-color: #ff5722 !important;
-  }
-}
-
-.u-background-color-orange-red {
-    @apply(--u-background-color-orange-red);
-}
-
-:root {
-  --u-text-color-silver-grey {
-      color: #9e9e9e !important;
-  }
-}
-
-.u-text-color-silver-grey {
-    @apply(--u-text-color-silver-grey);
-}
-
-:root {
-  --u-background-color-silver-grey {
-      background-color: #9e9e9e !important;
-  }
-}
-
-.u-background-color-silver-grey {
-    @apply(--u-background-color-silver-grey);
-}
-
 
 /* 4 */
 
-:root {
-  --u-text-color-neon-mustard {
-      color: #e1eb10 !important;
-  }
-}
-
-.u-text-color-neon-mustard {
-    @apply(--u-text-color-neon-mustard);
-}
-
-:root {
-  --u-border-color-neon-mustard {
-      border-color: #e1eb10 !important;
-  }
-}
-
-.u-border-color-neon-mustard {
-    @apply(--u-border-color-neon-mustard);
-}
-
-
-:root {
-  --u-background-color-neon-mustard {
-      background-color: #e1eb10 !important;
-  }
-}
-
-.u-background-color-neon-mustard {
-    @apply(--u-background-color-neon-mustard);
-}
-
-:root {
-  --u-text-color-soft-white {
-      text-color: #F8F8F7 !important;
-  }
-}
-
-.u-text-color-soft-white {
-    @apply(--u-text-color-soft-white);
-}
-
-:root {
-  --u-background-color-soft-white {
-      background-color: #F8F8F7 !important;
-  }
-}
-
-.u-background-color-soft-white {
-    @apply(--u-background-color-soft-white);
-}
-
-/* 5 */
-:root {
-  --u-text-color-tomato {
-      color: tomato !important;
-  }
-}
-
-.u-text-color-tomato {
-    @apply(--u-text-color-tomato);
-}
-
-:root {
-  --u-background-color-tomato {
-      background-color: tomato !important;
-  }
-}
-
-.u-background-color-tomato {
-    @apply(--u-background-color-tomato);
-}
-
-
-:root {
-  --u-text-color-tomato-red {
-    color: #E1332D;
-  }
-}
-
-.u-text-color-tomato-red {
-    @apply(--u-text-color-tomato-red);
-}
-
-:root {
-  --u-background-color-tomato-red {
-      background-color: #E1332D !important;
-  }
-}
-
-.u-background-color-tomato {
-    @apply(--u-background-color-tomato-red);
-}
-
-:root {
-  --u-text-color-medium-aquamarine {
-      color: MediumAquamarine !important;
-  }
-}
-
-.u-text-color-medium-aquamarine {
-    @apply(--u-text-color-medium-aquamarine);
-}
-
-:root {
-  --u-background-color-medium-aquamarine {
-      background-color: MediumAquamarine !important;
-  }
-}
-
-.u-background-color-medium-aquamarine {
-    @apply(--u-background-color-medium-aquamarine);
-}
-
-/* 6 */
 :root {
   @for $c from 1 to 9 {
       --u-background-color-$c$(c)$(c) {
