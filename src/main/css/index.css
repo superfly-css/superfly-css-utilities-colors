@@ -7,7 +7,7 @@
    1: Gray color utilities
    2: Notification background color utilities
    3: Text, background, and border colors
-   4: Simple numeric Hex Color Combinations
+   4: Numeric Triple Hex Color Combinations
    --------------------------------------
    -- Naming Conventions --
    --------------------------------------
@@ -25,44 +25,34 @@
 @import "superfly-css-variables-colors";
 
 /* 1 */
-
-:root {
-  @each $weight in 100, 300, 400, 500, 600, 700, 900 {
-      --u-background-color-gray-$(weight) {
-          background-color: var(--color-gray-$(weight)) !important;
-      }
-  }
-}
-
 @each $weight in 100, 300, 400, 500, 600, 700, 900 {
+    :root {
+        --u-background-color-gray-$(weight) {
+          background-color: var(--color-gray-$(weight)) !important;
+        }
+    }
     .u-background-color-gray-$(weight) {
         @apply(--u-background-color-gray-$(weight));
     }
 }
 
-:root {
-  @each $weight in 100, 300, 400, 500, 600, 700, 900 {
+@each $weight in 100, 300, 400, 500, 600, 700, 900 {
+    :root {
       --u-text-color-gray-$(weight) {
           color: var(--color-gray-$(weight)) !important;
       }
-  }
-}
-
-@each $weight in 100, 300, 400, 500, 600, 700, 900 {
+    }
     .u-text-color-gray-$(weight) {
         @apply(--u-text-color-gray-$(weight));
     }
 }
 
-:root {
-  @each $weight in 100, 300, 400, 500, 600, 700, 900 {
+@each $weight in 100, 300, 400, 500, 600, 700, 900 {
+    :root {
       --u-border-color-gray-$(weight) {
           color: var(--color-gray-$(weight)) !important;
       }
-  }
-}
-
-@each $weight in 100, 300, 400, 500, 600, 700, 900 {
+    }
     .u-border-color-gray-$(weight) {
         @apply(--u-border-color-gray-$(weight));
     }
@@ -70,18 +60,13 @@
 
 
 /* 2 */
-:root {
-  @each $weight in 100, 300, 500, 700, 900 {
-      @each $brand in primary, success, info, warning, danger {
+@each $weight in 100, 300, 500, 700, 900 {
+    @each $brand in primary, success, info, warning, danger {
+        :root {
           --u-background-color-$(brand)-$(weight) {
               background-color: var(--color-$(brand)-$(weight)) !important;
           }
-      }
-  }
-}
-
-@each $weight in 100, 300, 500, 700, 900 {
-    @each $brand in primary, success, info, warning, danger {
+        }
         .u-background-color-$(brand)-$(weight) {
             @apply(--u-background-color-$(brand)-$(weight));
         }
@@ -90,14 +75,12 @@
 
 
 /* 3 */
-
 @each $color in black, white, tomato, neon-mustard, purple-pink, tomato-red, light-orange-red, orange-red, silver-grey, soft-white, medium-aquamarine {
     :root {
       --u-text-color-$(color) {
           color: var(--color-$(color)) !important;
       }
     }
-
     .u-text-color-$(color) {
         @apply(--u-text-color-$(color));
     }
@@ -124,45 +107,47 @@
 }
 
 /* 4 */
-
-:root {
-  @for $c from 1 to 9 {
-      --u-background-color-$c$(c)$(c) {
-          background-color: #$c$(c)$(c) !important;
-      }
-  }
-}
-
-@for $c from 1 to 9 {
-    .u-background-color-$c$(c)$(c) {
-        @apply(--u-background-color-$c$(c)$(c));
+@for $a from 0 to 9 {
+    @for $b from 0 to 9 {
+        @for $c from 0 to 9 {
+            :root {
+              --u-background-color-$(a)$(b)$(c) {
+                  background-color: #$(a)$(b)$(c) !important;
+              }
+            }
+            .u-background-color-$(a)$(b)$(c) {
+                @apply(--u-background-color-$(a)$(b)$(c));
+            }
+        }
     }
 }
 
-:root {
-  @for $c from 1 to 9 {
-      --u-border-color-$c$(c)$(c) {
-          border-color: #$c$(c)$(c) !important;
-      }
-  }
-}
-
-@for $c from 1 to 9 {
-    .u-border-color-$c$(c)$(c) {
-        @apply(--u-border-color-$c$(c)$(c));
+@for $a from 0 to 9 {
+    @for $b from 0 to 9 {
+        @for $c from 0 to 9 {
+            :root {
+              --u-border-color-$(a)$(b)$(c) {
+                  border-color: #$(a)$(b)$(c) !important;
+              }
+            }
+            .u-border-color-$(a)$(b)$(c) {
+                @apply(--u-border-color-$(a)$(b)$(c));
+            }
+        }
     }
 }
 
-:root {
-  @for $c from 1 to 9 {
-      --u-text-color-$c$(c)$(c) {
-          color: #$c$(c)$(c) !important;
-      }
-  }
-}
-
-@for $c from 1 to 9 {
-    .u-text-color-$c$(c)$(c) {
-        @apply(--u-text-color-$c$(c)$(c));
+@for $a from 0 to 9 {
+    @for $b from 0 to 9 {
+        @for $c from 0 to 9 {
+            :root {
+              --u-text-color-$(a)$(b)$(c) {
+                  color: #$(a)$(b)$(c) !important;
+              }
+            }
+            .u-text-color-$(a)$(b)$(c) {
+                @apply(--u-text-color-$(a)$(b)$(c));
+            }
+        }
     }
 }
