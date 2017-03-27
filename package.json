@@ -1,6 +1,6 @@
 {
   "name": "superfly-css-utilities-colors",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Color utilities",
   "main": "src/main/css/index.css",
   "scripts": {

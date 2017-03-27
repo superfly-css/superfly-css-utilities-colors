@@ -26,37 +26,26 @@
 /* 1 */
 @each $weight in 100, 300, 400, 500, 600, 700, 900 {
     :root {
-        --u-background-color-gray-$(weight) {
+      --u-background-color-gray-$(weight) {
           background-color: var(--color-gray-$(weight)) !important;
         }
+      --u-text-color-gray-$(weight) {
+          color: var(--color-gray-$(weight)) !important;
+      }
+      --u-border-color-gray-$(weight) {
+          color: var(--color-gray-$(weight)) !important;
+      }
     }
     .u-background-color-gray-$(weight) {
         @apply(--u-background-color-gray-$(weight));
     }
-}
-
-@each $weight in 100, 300, 400, 500, 600, 700, 900 {
-    :root {
-      --u-text-color-gray-$(weight) {
-          color: var(--color-gray-$(weight)) !important;
-      }
-    }
     .u-text-color-gray-$(weight) {
         @apply(--u-text-color-gray-$(weight));
-    }
-}
-
-@each $weight in 100, 300, 400, 500, 600, 700, 900 {
-    :root {
-      --u-border-color-gray-$(weight) {
-          color: var(--color-gray-$(weight)) !important;
-      }
     }
     .u-border-color-gray-$(weight) {
         @apply(--u-border-color-gray-$(weight));
     }
 }
-
 
 /* 2 */
 @each $weight in 100, 300, 500, 700, 900 {
